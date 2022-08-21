@@ -90,36 +90,6 @@ class ChargingStationsTests: XCTestCase {
         XCTAssertEqual(poi.coordinate.latitude, lat)
         XCTAssertEqual(poi.coordinate.longitude, long)
     }
-
-    func test_whileNoLocationAdress_stateShouldBe_finishedLoading_withNoAddressInfo() {
-        // given
-        let id = randomInt
-        let title = randomString(length: 45)
-        let lat = randomDouble
-        let long = randomDouble
-        if let service = service as? MockChargingStationService {
-            service.data = [
-                PointOfInterestDTO(id: id, addressInfo: AddressInfoDTO(title: title, addressLine1: nil, addressLine2: nil, latitude: lat, longitude: long))
-            ]
-        }
-        // when
-       let expectation = expectation(description: "expect have one POI finishedLoading successfully")
-        viewModel.fetchPOIs()
-        let date = Date()
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
-            expectation.fulfill()
-        }
-        waitForExpectations(timeout: 3)
-        // then
-        let message = String.updateAtMessage(date: date)
-        XCTAssertEqual(viewModel.state, ViewModelState.finishedLoading(message))
-        XCTAssertEqual(viewModel.poiList.count, 1)
-        let poi = viewModel.poiList.first!
-        XCTAssertEqual(poi.id, id)
-        XCTAssertEqual(poi.title, title)
-        XCTAssertEqual(poi.coordinate.latitude, lat)
-        XCTAssertEqual(poi.coordinate.longitude, long)
-    }
     
     func test_DTO_ifNumberOfChargingPoints_isNil_BusinessObject_should_haveNumberOfChargingPoints_equal_0() {
         // given
@@ -182,6 +152,8 @@ class ChargingStationsTests: XCTestCase {
         // then
         XCTAssertTrue(bo.info.contains(where: { $0.title == String.address && $0.value == addressLine1+",\n"+addressLine2}))
     }
+    
+    
 }
 
 extension ChargingStationsTests {
@@ -196,5 +168,73 @@ extension ChargingStationsTests {
     func randomString(length: Int) -> String {
       let letters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
       return String((0..<length).map{ _ in letters.randomElement()! })
+    }
+    
+    func test_ifRequestGorEmptyDataError_stateShouldBe_emptyDataSetError() {
+        // given
+        if let service = service as? MockChargingStationService {
+            service.error = .emptyDataSet
+        }
+        // when
+       let expectation = expectation(description: "expect have one POI finishedLoading successfully")
+        viewModel.fetchPOIs()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 3)
+        // then
+        XCTAssertTrue(viewModel.poiList.isEmpty)
+        XCTAssertEqual(viewModel.state, .error(.emptyDataSet))
+    }
+    
+    func test_ifRequestGorNetworkError_stateShouldBe_networkError() {
+        // given
+        if let service = service as? MockChargingStationService {
+            service.error = .network
+        }
+        // when
+       let expectation = expectation(description: "expect have one POI finishedLoading successfully")
+        viewModel.fetchPOIs()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 3)
+        // then
+        XCTAssertTrue(viewModel.poiList.isEmpty)
+        XCTAssertEqual(viewModel.state, .error(.network))
+    }
+    
+    func test_ifParsingDataFailed_shouldGet_parsingError() {
+        // given
+        if let service = service as? MockChargingStationService {
+            service.error = .parsing
+        }
+        // when
+       let expectation = expectation(description: "expect have one POI finishedLoading successfully")
+        viewModel.fetchPOIs()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 3)
+        // then
+        XCTAssertTrue(viewModel.poiList.isEmpty)
+        XCTAssertEqual(viewModel.state, .error(.parsing))
+    }
+    
+    func test_ifUndefinedErrorReceived_shouldGet_unknownError() {
+        // given
+        if let service = service as? MockChargingStationService {
+            service.error = .unknown
+        }
+        // when
+       let expectation = expectation(description: "expect have one POI finishedLoading successfully")
+        viewModel.fetchPOIs()
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 3)
+        // then
+        XCTAssertTrue(viewModel.poiList.isEmpty)
+        XCTAssertEqual(viewModel.state, .error(.unknown))
     }
 }
