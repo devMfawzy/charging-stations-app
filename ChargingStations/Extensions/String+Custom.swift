@@ -27,6 +27,18 @@ extension String {
     static var updatedAt: String {
         "Updated at"
     }
+    
+    static var retry: String {
+        "Retry"
+    }
+    
+    static var waiting: String {
+        "Waiting..."
+    }
+    
+    static var done: String {
+        "Done"
+    }
 }
 
 // MARK: Update At Message

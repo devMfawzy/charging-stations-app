@@ -11,7 +11,8 @@ import SwiftUI
 struct ChargingStationsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MapView()
+                .environmentObject(ChargingStationsViewModel())
         }
     }
 }

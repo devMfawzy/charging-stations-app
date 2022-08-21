@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5BC8166D28B25E5E0052B1AF /* ChargingStationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8166C28B25E5E0052B1AF /* ChargingStationsApp.swift */; };
-		5BC8166F28B25E5E0052B1AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8166E28B25E5E0052B1AF /* ContentView.swift */; };
+		5BC8166F28B25E5E0052B1AF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8166E28B25E5E0052B1AF /* MapView.swift */; };
 		5BC8167128B25E610052B1AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8167028B25E610052B1AF /* Assets.xcassets */; };
 		5BC8167428B25E610052B1AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8167328B25E610052B1AF /* Preview Assets.xcassets */; };
 		5BC8167C28B260B30052B1AF /* AddressInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8167B28B260B30052B1AF /* AddressInfoDTO.swift */; };
@@ -25,6 +25,9 @@
 		5BC8169A28B277A70052B1AF /* String+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8169928B277A70052B1AF /* String+Custom.swift */; };
 		5BC816A228B27F910052B1AF /* ChargingStationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816A128B27F910052B1AF /* ChargingStationsTests.swift */; };
 		5BC816A928B27FE90052B1AF /* MockChargingStationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816A828B27FE90052B1AF /* MockChargingStationService.swift */; };
+		5BC816AD28B2A9030052B1AF /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816AC28B2A9030052B1AF /* DetailsView.swift */; };
+		5BC816AF28B2AB090052B1AF /* LocationCoordinate+mapCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816AE28B2AB090052B1AF /* LocationCoordinate+mapCoordinate.swift */; };
+		5BC816B128B2B1780052B1AF /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816B028B2B1780052B1AF /* AppConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,7 @@
 /* Begin PBXFileReference section */
 		5BC8166928B25E5E0052B1AF /* ChargingStations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChargingStations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC8166C28B25E5E0052B1AF /* ChargingStationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationsApp.swift; sourceTree = "<group>"; };
-		5BC8166E28B25E5E0052B1AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5BC8166E28B25E5E0052B1AF /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		5BC8167028B25E610052B1AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BC8167328B25E610052B1AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5BC8167B28B260B30052B1AF /* AddressInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressInfoDTO.swift; sourceTree = "<group>"; };
@@ -58,6 +61,9 @@
 		5BC8169F28B27F910052B1AF /* ChargingStationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChargingStationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC816A128B27F910052B1AF /* ChargingStationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationsTests.swift; sourceTree = "<group>"; };
 		5BC816A828B27FE90052B1AF /* MockChargingStationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChargingStationService.swift; sourceTree = "<group>"; };
+		5BC816AC28B2A9030052B1AF /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		5BC816AE28B2AB090052B1AF /* LocationCoordinate+mapCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationCoordinate+mapCoordinate.swift"; sourceTree = "<group>"; };
+		5BC816B028B2B1780052B1AF /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +105,11 @@
 		5BC8166B28B25E5E0052B1AF /* ChargingStations */ = {
 			isa = PBXGroup;
 			children = (
+				5BC8168628B265FA0052B1AF /* ViewModel */,
 				5BC8169028B26A500052B1AF /* Service */,
 				5BC8168B28B267DE0052B1AF /* Extensions */,
 				5BC8167A28B2604F0052B1AF /* Models */,
-				5BC8168628B265FA0052B1AF /* ViewModel */,
-				5BC8166C28B25E5E0052B1AF /* ChargingStationsApp.swift */,
-				5BC8166E28B25E5E0052B1AF /* ContentView.swift */,
+				5BC816AA28B2A8120052B1AF /* Views */,
 				5BC8167028B25E610052B1AF /* Assets.xcassets */,
 				5BC8167228B25E610052B1AF /* Preview Content */,
 			);
@@ -128,6 +133,7 @@
 				5BC8168228B264190052B1AF /* ChargingStations.swift */,
 				5BC8169728B26E310052B1AF /* LocationCoordinate.swift */,
 				5BC8168428B264FD0052B1AF /* Error.swift */,
+				5BC816B028B2B1780052B1AF /* AppConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -145,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				5BC8169928B277A70052B1AF /* String+Custom.swift */,
+				5BC816AE28B2AB090052B1AF /* LocationCoordinate+mapCoordinate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -166,6 +173,16 @@
 				5BC816A828B27FE90052B1AF /* MockChargingStationService.swift */,
 			);
 			path = ChargingStationsTests;
+			sourceTree = "<group>";
+		};
+		5BC816AA28B2A8120052B1AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BC8166C28B25E5E0052B1AF /* ChargingStationsApp.swift */,
+				5BC8166E28B25E5E0052B1AF /* MapView.swift */,
+				5BC816AC28B2A9030052B1AF /* DetailsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,16 +286,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BC8169828B26E310052B1AF /* LocationCoordinate.swift in Sources */,
-				5BC8166F28B25E5E0052B1AF /* ContentView.swift in Sources */,
+				5BC8166F28B25E5E0052B1AF /* MapView.swift in Sources */,
 				5BC8168328B264190052B1AF /* ChargingStations.swift in Sources */,
 				5BC8169A28B277A70052B1AF /* String+Custom.swift in Sources */,
+				5BC816AF28B2AB090052B1AF /* LocationCoordinate+mapCoordinate.swift in Sources */,
 				5BC8166D28B25E5E0052B1AF /* ChargingStationsApp.swift in Sources */,
 				5BC8167C28B260B30052B1AF /* AddressInfoDTO.swift in Sources */,
 				5BC8169628B26BDB0052B1AF /* API.swift in Sources */,
 				5BC8168128B261D60052B1AF /* PointOfInterestBO.swift in Sources */,
 				5BC8168528B264FD0052B1AF /* Error.swift in Sources */,
+				5BC816B128B2B1780052B1AF /* AppConfig.swift in Sources */,
 				5BC8169428B26B6F0052B1AF /* ChargingStationsService.swift in Sources */,
 				5BC8168828B266810052B1AF /* ChargingStationsViewModel.swift in Sources */,
+				5BC816AD28B2A9030052B1AF /* DetailsView.swift in Sources */,
 				5BC8167E28B261320052B1AF /* PointOfInterestDTO.swift in Sources */,
 				5BC8168A28B2673B0052B1AF /* ViewModelState.swift in Sources */,
 				5BC8169228B26A6B0052B1AF /* ChargingStationsServiceProtocol.swift in Sources */,

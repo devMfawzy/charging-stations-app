@@ -109,7 +109,7 @@ class ChargingStationsTests: XCTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now()+0.1) {
             expectation.fulfill()
         }
-        waitForExpectations(timeout: 1)
+        waitForExpectations(timeout: 3)
         // then
         let message = String.updateAtMessage(date: date)
         XCTAssertEqual(viewModel.state, ViewModelState.finishedLoading(message))

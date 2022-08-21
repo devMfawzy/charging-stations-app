@@ -15,9 +15,10 @@ final class ChargingStationsViewModel: ObservableObject {
     @Published var state: ViewModelState = .idle
     @Published var region = MKCoordinateRegion()
     var centerCoordinate = LocationCoordinate.defaultCoordinate
-    var defaultRegoinSpan = MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04)
+    var defaultRegoinSpan = MKCoordinateSpan(latitudeDelta: AppConfig.coordinateSpan.latitudeDelta,
+                                             longitudeDelta: AppConfig.coordinateSpan.latitudeDelta)
     var delayedUpdate = PassthroughSubject<Void, Never>()
-    var updateAfterTimeInterval: TimeInterval = 10
+    var updateAfterTimeInterval = AppConfig.updateAfterTimeInterval
     let service: ChargingStationsServiceProtocol
     var cancellables = Set<AnyCancellable>()
     
