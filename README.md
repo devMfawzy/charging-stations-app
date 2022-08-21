@@ -2,6 +2,6 @@
 Charging Stations App
 ### Architecture
 1. MVVM
-1. Combine framework
-1. URLSession for Networking
+1. Reactive programing -> Combine framework
+1. Networking -> URLSession
 1. UI -> SwiftUI
