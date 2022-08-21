@@ -29,6 +29,8 @@
 		5BC816AF28B2AB090052B1AF /* LocationCoordinate+mapCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816AE28B2AB090052B1AF /* LocationCoordinate+mapCoordinate.swift */; };
 		5BC816B128B2B1780052B1AF /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816B028B2B1780052B1AF /* AppConfig.swift */; };
 		5BC816B428B2B5D50052B1AF /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816B328B2B5D50052B1AF /* MapAnnotationView.swift */; };
+		5BC816B628B2C3AC0052B1AF /* Error_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816B528B2C3AC0052B1AF /* Error_Tests.swift */; };
+		5BC816B828B2C6FB0052B1AF /* ChargingStationsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816B728B2C6FB0052B1AF /* ChargingStationsModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		5BC816AE28B2AB090052B1AF /* LocationCoordinate+mapCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocationCoordinate+mapCoordinate.swift"; sourceTree = "<group>"; };
 		5BC816B028B2B1780052B1AF /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		5BC816B328B2B5D50052B1AF /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
+		5BC816B528B2C3AC0052B1AF /* Error_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error_Tests.swift; sourceTree = "<group>"; };
+		5BC816B728B2C6FB0052B1AF /* ChargingStationsModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationsModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 			children = (
 				5BC816A128B27F910052B1AF /* ChargingStationsTests.swift */,
 				5BC816A828B27FE90052B1AF /* MockChargingStationService.swift */,
+				5BC816B528B2C3AC0052B1AF /* Error_Tests.swift */,
+				5BC816B728B2C6FB0052B1AF /* ChargingStationsModelTests.swift */,
 			);
 			path = ChargingStationsTests;
 			sourceTree = "<group>";
@@ -315,6 +321,8 @@
 			files = (
 				5BC816A928B27FE90052B1AF /* MockChargingStationService.swift in Sources */,
 				5BC816A228B27F910052B1AF /* ChargingStationsTests.swift in Sources */,
+				5BC816B828B2C6FB0052B1AF /* ChargingStationsModelTests.swift in Sources */,
+				5BC816B628B2C3AC0052B1AF /* Error_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

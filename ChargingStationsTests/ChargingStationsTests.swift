@@ -154,22 +154,6 @@ class ChargingStationsTests: XCTestCase {
     }
     
     
-}
-
-extension ChargingStationsTests {
-    var randomInt: Int {
-        Int.random(in: 0...10000)
-    }
-    
-    var randomDouble: Double {
-        Double.random(in: 1.1111...55.5555)
-    }
-    
-    func randomString(length: Int) -> String {
-      let letters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-      return String((0..<length).map{ _ in letters.randomElement()! })
-    }
-    
     func test_ifRequestGorEmptyDataError_stateShouldBe_emptyDataSetError() {
         // given
         if let service = service as? MockChargingStationService {
@@ -236,5 +220,20 @@ extension ChargingStationsTests {
         // then
         XCTAssertTrue(viewModel.poiList.isEmpty)
         XCTAssertEqual(viewModel.state, .error(.unknown))
+    }
+}
+
+extension XCTestCase {
+    var randomInt: Int {
+        Int.random(in: 0...10000)
+    }
+    
+    var randomDouble: Double {
+        Double.random(in: 1.1111...55.5555)
+    }
+    
+    func randomString(length: Int) -> String {
+      let letters = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      return String((0..<length).map{ _ in letters.randomElement()! })
     }
 }

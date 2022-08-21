@@ -16,13 +16,13 @@ enum Error: Swift.Error, CustomStringConvertible, Equatable {
     var description: String {
         switch self {
         case .network:
-            return "Request to API server failed"
+            return .networkError
         case .parsing:
-            return "Failed parsing response from server"
+            return .parsingError
         case .emptyDataSet:
-            return "No points of interest available yet"
+            return .emptyDataError
         case .unknown:
-            return "An unknown error occurred"
+            return .unknownError
         }
     }
 }
