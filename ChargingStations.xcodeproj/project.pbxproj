@@ -23,7 +23,19 @@
 		5BC8169628B26BDB0052B1AF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8169528B26BDB0052B1AF /* API.swift */; };
 		5BC8169828B26E310052B1AF /* LocationCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8169728B26E310052B1AF /* LocationCoordinate.swift */; };
 		5BC8169A28B277A70052B1AF /* String+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8169928B277A70052B1AF /* String+Custom.swift */; };
+		5BC816A228B27F910052B1AF /* ChargingStationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816A128B27F910052B1AF /* ChargingStationsTests.swift */; };
+		5BC816A928B27FE90052B1AF /* MockChargingStationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816A828B27FE90052B1AF /* MockChargingStationService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BC816A328B27F910052B1AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BC8166128B25E5E0052B1AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BC8166828B25E5E0052B1AF;
+			remoteInfo = ChargingStations;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5BC8166928B25E5E0052B1AF /* ChargingStations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChargingStations.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,10 +55,20 @@
 		5BC8169528B26BDB0052B1AF /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		5BC8169728B26E310052B1AF /* LocationCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinate.swift; sourceTree = "<group>"; };
 		5BC8169928B277A70052B1AF /* String+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Custom.swift"; sourceTree = "<group>"; };
+		5BC8169F28B27F910052B1AF /* ChargingStationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChargingStationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC816A128B27F910052B1AF /* ChargingStationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationsTests.swift; sourceTree = "<group>"; };
+		5BC816A828B27FE90052B1AF /* MockChargingStationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChargingStationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5BC8166628B25E5E0052B1AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC8169C28B27F910052B1AF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				5BC8166B28B25E5E0052B1AF /* ChargingStations */,
+				5BC816A028B27F910052B1AF /* ChargingStationsTests */,
 				5BC8166A28B25E5E0052B1AF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				5BC8166928B25E5E0052B1AF /* ChargingStations.app */,
+				5BC8169F28B27F910052B1AF /* ChargingStationsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +159,15 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		5BC816A028B27F910052B1AF /* ChargingStationsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5BC816A128B27F910052B1AF /* ChargingStationsTests.swift */,
+				5BC816A828B27FE90052B1AF /* MockChargingStationService.swift */,
+			);
+			path = ChargingStationsTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +188,24 @@
 			productReference = 5BC8166928B25E5E0052B1AF /* ChargingStations.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5BC8169E28B27F910052B1AF /* ChargingStationsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BC816A528B27F910052B1AF /* Build configuration list for PBXNativeTarget "ChargingStationsTests" */;
+			buildPhases = (
+				5BC8169B28B27F910052B1AF /* Sources */,
+				5BC8169C28B27F910052B1AF /* Frameworks */,
+				5BC8169D28B27F910052B1AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BC816A428B27F910052B1AF /* PBXTargetDependency */,
+			);
+			name = ChargingStationsTests;
+			productName = ChargingStationsTests;
+			productReference = 5BC8169F28B27F910052B1AF /* ChargingStationsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -167,6 +218,10 @@
 				TargetAttributes = {
 					5BC8166828B25E5E0052B1AF = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					5BC8169E28B27F910052B1AF = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 5BC8166828B25E5E0052B1AF;
 					};
 				};
 			};
@@ -184,6 +239,7 @@
 			projectRoot = "";
 			targets = (
 				5BC8166828B25E5E0052B1AF /* ChargingStations */,
+				5BC8169E28B27F910052B1AF /* ChargingStationsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +251,13 @@
 			files = (
 				5BC8167428B25E610052B1AF /* Preview Assets.xcassets in Resources */,
 				5BC8167128B25E610052B1AF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BC8169D28B27F910052B1AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +285,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BC8169B28B27F910052B1AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BC816A928B27FE90052B1AF /* MockChargingStationService.swift in Sources */,
+				5BC816A228B27F910052B1AF /* ChargingStationsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BC816A428B27F910052B1AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BC8166828B25E5E0052B1AF /* ChargingStations */;
+			targetProxy = 5BC816A328B27F910052B1AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5BC8167528B25E610052B1AF /* Debug */ = {
@@ -397,6 +477,42 @@
 			};
 			name = Release;
 		};
+		5BC816A628B27F910052B1AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F7RWFZ45WK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fawzy.ChargingStationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChargingStations.app/ChargingStations";
+			};
+			name = Debug;
+		};
+		5BC816A728B27F910052B1AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F7RWFZ45WK;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fawzy.ChargingStationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChargingStations.app/ChargingStations";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -414,6 +530,15 @@
 			buildConfigurations = (
 				5BC8167828B25E610052B1AF /* Debug */,
 				5BC8167928B25E610052B1AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BC816A528B27F910052B1AF /* Build configuration list for PBXNativeTarget "ChargingStationsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BC816A628B27F910052B1AF /* Debug */,
+				5BC816A728B27F910052B1AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

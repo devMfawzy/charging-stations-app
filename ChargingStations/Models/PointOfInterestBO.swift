@@ -11,21 +11,23 @@ struct PointOfInterestBO: Identifiable {
     let id: Int
     let title: String
     let coordinate: LocationCoordinate
-    let info: [InfoItem]
+    var info: [InfoItem] = []
     
     init(dto: PointOfInterestDTO) {
         self.id = dto.id
         self.title = dto.addressInfo.title
         self.coordinate = LocationCoordinate(latitude: dto.addressInfo.latitude, longitude: dto.addressInfo.longitude)
+        self.info.append(InfoItem(title: .chargingPointsCount, value: String(dto.numberOfChargingPoints ?? 0)))
         var address = dto.addressInfo.addressLine1 ?? .empty
         if let addressLine2 = dto.addressInfo.addressLine2 {
-            address += .addressLineSeparator
+            if !address.isEmpty {
+                address += .addressLineSeparator
+            }
             address += addressLine2
         }
-        self.info = [
-            InfoItem(title: .chargingPointsCount, value: String(dto.numberOfChargingPoints ?? 0)),
-            InfoItem(title: .address, value: address)
-        ]
+        if !address.isEmpty {
+            self.info.append(InfoItem(title: .address, value: address))
+        }
     }
     
     init(id: Int, title: String, coordinate: LocationCoordinate, info: [InfoItem]) {
@@ -36,10 +38,8 @@ struct PointOfInterestBO: Identifiable {
     }
     
     struct InfoItem: Identifiable {
+        let id = UUID()
         let title: String
         let value: String
-        var id: String {
-            title
-        }
     }
 }
