@@ -11,6 +11,18 @@
 		5BC8166F28B25E5E0052B1AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8166E28B25E5E0052B1AF /* ContentView.swift */; };
 		5BC8167128B25E610052B1AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8167028B25E610052B1AF /* Assets.xcassets */; };
 		5BC8167428B25E610052B1AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8167328B25E610052B1AF /* Preview Assets.xcassets */; };
+		5BC8167C28B260B30052B1AF /* AddressInfoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8167B28B260B30052B1AF /* AddressInfoDTO.swift */; };
+		5BC8167E28B261320052B1AF /* PointOfInterestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8167D28B261320052B1AF /* PointOfInterestDTO.swift */; };
+		5BC8168128B261D60052B1AF /* PointOfInterestBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8168028B261D60052B1AF /* PointOfInterestBO.swift */; };
+		5BC8168328B264190052B1AF /* ChargingStations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8168228B264190052B1AF /* ChargingStations.swift */; };
+		5BC8168528B264FD0052B1AF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8168428B264FD0052B1AF /* Error.swift */; };
+		5BC8168828B266810052B1AF /* ChargingStationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8168728B266810052B1AF /* ChargingStationsViewModel.swift */; };
+		5BC8168A28B2673B0052B1AF /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8168928B2673B0052B1AF /* ViewModelState.swift */; };
+		5BC8169228B26A6B0052B1AF /* ChargingStationsServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8169128B26A6B0052B1AF /* ChargingStationsServiceProtocol.swift */; };
+		5BC8169428B26B6F0052B1AF /* ChargingStationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8169328B26B6F0052B1AF /* ChargingStationsService.swift */; };
+		5BC8169628B26BDB0052B1AF /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8169528B26BDB0052B1AF /* API.swift */; };
+		5BC8169828B26E310052B1AF /* LocationCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8169728B26E310052B1AF /* LocationCoordinate.swift */; };
+		5BC8169A28B277A70052B1AF /* String+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8169928B277A70052B1AF /* String+Custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +31,18 @@
 		5BC8166E28B25E5E0052B1AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5BC8167028B25E610052B1AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BC8167328B25E610052B1AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5BC8167B28B260B30052B1AF /* AddressInfoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressInfoDTO.swift; sourceTree = "<group>"; };
+		5BC8167D28B261320052B1AF /* PointOfInterestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterestDTO.swift; sourceTree = "<group>"; };
+		5BC8168028B261D60052B1AF /* PointOfInterestBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterestBO.swift; sourceTree = "<group>"; };
+		5BC8168228B264190052B1AF /* ChargingStations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStations.swift; sourceTree = "<group>"; };
+		5BC8168428B264FD0052B1AF /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		5BC8168728B266810052B1AF /* ChargingStationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationsViewModel.swift; sourceTree = "<group>"; };
+		5BC8168928B2673B0052B1AF /* ViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
+		5BC8169128B26A6B0052B1AF /* ChargingStationsServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationsServiceProtocol.swift; sourceTree = "<group>"; };
+		5BC8169328B26B6F0052B1AF /* ChargingStationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationsService.swift; sourceTree = "<group>"; };
+		5BC8169528B26BDB0052B1AF /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		5BC8169728B26E310052B1AF /* LocationCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCoordinate.swift; sourceTree = "<group>"; };
+		5BC8169928B277A70052B1AF /* String+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +75,10 @@
 		5BC8166B28B25E5E0052B1AF /* ChargingStations */ = {
 			isa = PBXGroup;
 			children = (
+				5BC8169028B26A500052B1AF /* Service */,
+				5BC8168B28B267DE0052B1AF /* Extensions */,
+				5BC8167A28B2604F0052B1AF /* Models */,
+				5BC8168628B265FA0052B1AF /* ViewModel */,
 				5BC8166C28B25E5E0052B1AF /* ChargingStationsApp.swift */,
 				5BC8166E28B25E5E0052B1AF /* ContentView.swift */,
 				5BC8167028B25E610052B1AF /* Assets.xcassets */,
@@ -65,6 +93,46 @@
 				5BC8167328B25E610052B1AF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5BC8167A28B2604F0052B1AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BC8167B28B260B30052B1AF /* AddressInfoDTO.swift */,
+				5BC8167D28B261320052B1AF /* PointOfInterestDTO.swift */,
+				5BC8168028B261D60052B1AF /* PointOfInterestBO.swift */,
+				5BC8168228B264190052B1AF /* ChargingStations.swift */,
+				5BC8169728B26E310052B1AF /* LocationCoordinate.swift */,
+				5BC8168428B264FD0052B1AF /* Error.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BC8168628B265FA0052B1AF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5BC8168728B266810052B1AF /* ChargingStationsViewModel.swift */,
+				5BC8168928B2673B0052B1AF /* ViewModelState.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5BC8168B28B267DE0052B1AF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5BC8169928B277A70052B1AF /* String+Custom.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5BC8169028B26A500052B1AF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5BC8169128B26A6B0052B1AF /* ChargingStationsServiceProtocol.swift */,
+				5BC8169328B26B6F0052B1AF /* ChargingStationsService.swift */,
+				5BC8169528B26BDB0052B1AF /* API.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +205,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC8169828B26E310052B1AF /* LocationCoordinate.swift in Sources */,
 				5BC8166F28B25E5E0052B1AF /* ContentView.swift in Sources */,
+				5BC8168328B264190052B1AF /* ChargingStations.swift in Sources */,
+				5BC8169A28B277A70052B1AF /* String+Custom.swift in Sources */,
 				5BC8166D28B25E5E0052B1AF /* ChargingStationsApp.swift in Sources */,
+				5BC8167C28B260B30052B1AF /* AddressInfoDTO.swift in Sources */,
+				5BC8169628B26BDB0052B1AF /* API.swift in Sources */,
+				5BC8168128B261D60052B1AF /* PointOfInterestBO.swift in Sources */,
+				5BC8168528B264FD0052B1AF /* Error.swift in Sources */,
+				5BC8169428B26B6F0052B1AF /* ChargingStationsService.swift in Sources */,
+				5BC8168828B266810052B1AF /* ChargingStationsViewModel.swift in Sources */,
+				5BC8167E28B261320052B1AF /* PointOfInterestDTO.swift in Sources */,
+				5BC8168A28B2673B0052B1AF /* ViewModelState.swift in Sources */,
+				5BC8169228B26A6B0052B1AF /* ChargingStationsServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
