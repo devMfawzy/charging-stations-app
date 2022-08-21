@@ -31,6 +31,7 @@
 		5BC816B428B2B5D50052B1AF /* MapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816B328B2B5D50052B1AF /* MapAnnotationView.swift */; };
 		5BC816B628B2C3AC0052B1AF /* Error_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816B528B2C3AC0052B1AF /* Error_Tests.swift */; };
 		5BC816B828B2C6FB0052B1AF /* ChargingStationsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816B728B2C6FB0052B1AF /* ChargingStationsModelTests.swift */; };
+		5BC816BA28B2D2A90052B1AF /* OperatorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC816B928B2D2A90052B1AF /* OperatorInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		5BC816B328B2B5D50052B1AF /* MapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotationView.swift; sourceTree = "<group>"; };
 		5BC816B528B2C3AC0052B1AF /* Error_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error_Tests.swift; sourceTree = "<group>"; };
 		5BC816B728B2C6FB0052B1AF /* ChargingStationsModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingStationsModelTests.swift; sourceTree = "<group>"; };
+		5BC816B928B2D2A90052B1AF /* OperatorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				5BC8169728B26E310052B1AF /* LocationCoordinate.swift */,
 				5BC8168428B264FD0052B1AF /* Error.swift */,
 				5BC816B028B2B1780052B1AF /* AppConfig.swift */,
+				5BC816B928B2D2A90052B1AF /* OperatorInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				5BC8166F28B25E5E0052B1AF /* MapView.swift in Sources */,
 				5BC8168328B264190052B1AF /* ChargingStations.swift in Sources */,
 				5BC8169A28B277A70052B1AF /* String+Custom.swift in Sources */,
+				5BC816BA28B2D2A90052B1AF /* OperatorInfo.swift in Sources */,
 				5BC816AF28B2AB090052B1AF /* LocationCoordinate+mapCoordinate.swift in Sources */,
 				5BC8166D28B25E5E0052B1AF /* ChargingStationsApp.swift in Sources */,
 				5BC8167C28B260B30052B1AF /* AddressInfoDTO.swift in Sources */,

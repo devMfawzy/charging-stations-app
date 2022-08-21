@@ -15,7 +15,7 @@ struct PointOfInterestBO: Identifiable {
     
     init(dto: PointOfInterestDTO) {
         self.id = dto.id
-        self.title = dto.addressInfo.title
+        self.title = dto.operatorInfo?.title ?? dto.addressInfo.title
         self.coordinate = LocationCoordinate(latitude: dto.addressInfo.latitude, longitude: dto.addressInfo.longitude)
         self.info.append(InfoItem(title: .chargingPointsCount, value: String(dto.numberOfChargingPoints ?? 0)))
         var address = dto.addressInfo.addressLine1 ?? .empty
