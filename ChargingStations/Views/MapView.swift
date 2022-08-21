@@ -15,9 +15,7 @@ struct MapView: View {
         ZStack(alignment: .bottom) {
             Map(coordinateRegion: $viewModel.region, annotationItems: viewModel.poiList, annotationContent: { poi in
                 MapAnnotation(coordinate: poi.coordinate.mapCoordinate) {
-                    Circle()
-                        .fill(Color.pink)
-                        .frame(width: 30, height: 30)
+                    MapAnnotationView()
                         .onTapGesture(count: 1, perform: {
                             viewModel.selectedPOI = poi
                         })
